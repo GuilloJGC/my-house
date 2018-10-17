@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square garden;
+    private Person farmer;
 
     /**
      * Constructor for objects of class Picture
@@ -30,7 +31,8 @@ public class Picture
      */
     public void draw()
     {
-       
+        farmer = new Person();
+        
         
         sun = new Circle();
         sun.changeColor("yellow");
@@ -102,6 +104,9 @@ public class Picture
     public void atardecer()
     {
         sun.slowMoveVertical(100);
+        farmer.moveHorizontal(150);
+        farmer.makeVisible();
+        farmer.slowMoveHorizontal(-100);
     }
   
     
