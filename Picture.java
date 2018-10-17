@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Square garden;
 
     /**
      * Constructor for objects of class Picture
@@ -29,6 +30,22 @@ public class Picture
      */
     public void draw()
     {
+       
+        
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(60);
+        sun.changeSize(80);
+        
+        
+        garden = new Square();
+        garden.changeColor("green");
+        garden.moveHorizontal(-320);
+        garden.moveVertical(100);
+        garden.changeSize(600);
+        garden.makeVisible();
+        
         wall = new Square();
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
@@ -41,21 +58,20 @@ public class Picture
         window.moveVertical(40);
         window.changeSize(40);
         window.makeVisible();
-
+        
+       
         roof = new Triangle();  
         roof.changeSize(60, 180);
         roof.moveHorizontal(20);
         roof.moveVertical(-60);
         roof.makeVisible();
 
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
         sun.makeVisible();
+        sun.slowMoveVertical(-100);
+        
     }
-
+    
+    
     /**
      * Change this picture to black/white display
      */
@@ -83,4 +99,10 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+  
+    
+    
 }
+
+
+
